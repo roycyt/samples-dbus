@@ -1,0 +1,21 @@
+$ ./dbus-server
+Starting dbus tiny server v0.1
+Got D-Bus request: org.freedesktop.DBus.Properties.GetAll on /org/example/TestObject
+Got D-Bus request: org.example.TestInterface.Ping on /org/example/TestObject
+Got D-Bus request: org.example.TestInterface.Echo on /org/example/TestObject
+Got D-Bus request: org.example.TestInterface.EmitSignal on /org/example/TestObject
+Got D-Bus request: org.example.TestInterface.Quit on /org/example/TestObject
+Server exiting...
+
+
+$ ./dbus-client
+Testing server interface v0.1
+Calling Ping()...
+The server answered: 'Pong'
+Calling Echo('1234')...
+The server answered: '1234'
+Calling method EmitSignal()...
+signal handler: OnEmitSignal received.
+The server emitted 'OnEmitSignal'
+Calling method Quit()...
+
