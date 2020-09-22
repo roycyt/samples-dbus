@@ -18,5 +18,7 @@ clean:
 	rm -f dbus-server
 	rm -f dbus-client
 
+setup:
+	sudo apt-get install libdbus-1-dev libdbus-glib-1-dev
 
 .PHONY: all clean
